@@ -1,0 +1,13 @@
+.customButton{
+    border-radius: 2rem;
+    padding: 0.5rem 2rem;
+    border: 2.5px solid transparent;
+    
+}
+
+.customButton:hover{
+    border: 2.5px solid #000000 !important;
+    background-color: white !important;
+    color: #000000 !important;
+    cursor: pointer;
+}

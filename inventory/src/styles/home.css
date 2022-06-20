@@ -1,0 +1,18 @@
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    border: 1px solid #e3e6f0;
+    border-radius: 0.35rem;
+}
+.shadow{
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58,59,69,0.15) !important;
+}
+
+.border-left{    
+    border: 0px;
+    border-left: 0.2rem solid !important;
+}
+
