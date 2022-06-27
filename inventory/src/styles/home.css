@@ -13,6 +13,26 @@
 
 .border-left{    
     border: 0px;
-    border-left: 0.2rem solid !important;
+    
+}
+
+.border-primary{
+    border-left: 0.25rem solid #4e73df !important;
+}
+
+.border-success{
+    border-left: 0.25rem solid #1cc88a !important;
+}
+
+.border-danger{
+    border-left: 0.25rem solid #e74a3b !important;
+}
+
+.border-warning{
+    border-left: 0.25rem solid #f6c23e !important;
+}
+
+.border-info{
+    border-left: 0.25rem solid #36b9cc !important;
 }
 

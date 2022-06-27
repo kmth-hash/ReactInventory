@@ -1,8 +1,7 @@
 import "./App.css";
 import { initialState, combineReducers } from "./reducers";
 import { AppStateProvider } from "./context/AppState";
-import { BrowserRouter, Link, Redirect, Routes, Route } from "react-router-dom";
-// import { Routes, Route } from "react-router";
+import { BrowserRouter, Link, Navigate, Routes, Route } from "react-router-dom";
 import counterReducer from "./reducers/CounterReducer";
 import ItemAdd from "./pages/ItemAdd";
 import Navbar from "./components/Navbar";
@@ -20,6 +19,7 @@ function App() {
       <div className="App">
         <Navbar />
         <Routes>
+          <Route path="/" element={<Navigate to={"/home"} />} />
           <Route path="item-add" element={<ItemAdd />} />
           <Route path="home" element={<Home />} />
           <Route path="items" element={<ItemAdd />} />

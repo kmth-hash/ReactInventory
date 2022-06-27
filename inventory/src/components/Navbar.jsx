@@ -78,18 +78,20 @@ function Navbar() {
           </li> */}
         </ul>
         <form className="form-inline my-2 my-lg-0">
+          <div className="d-flex justify-content-center w-100">
           <input
-            className="form-control mr-sm-2"
+            className="form-control my-2 mr-0"
             type="search"
             placeholder="Search"
             aria-label="Search"
           />
           <button
-            className="btn btn-primary my-2 my-sm-0"
+            className="btn btn-primary my-2 my-0"
             type="submit"
           >
             Search
           </button>
+          </div>
         </form>
       </div>
     </nav>
