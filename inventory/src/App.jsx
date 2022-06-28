@@ -16,7 +16,7 @@ const appReducers = combineReducers({
 function App() {
   return (
     <AppStateProvider reducer={appReducers} initialState={initialState}>
-      <div className="App">
+      <div className="App primary-color-1">
         <Navbar />
         <Routes>
           <Route path="/" element={<Navigate to={"/home"} />} />

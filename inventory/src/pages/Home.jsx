@@ -7,11 +7,11 @@ function Home() {
     <div className="container py-3 my-1">
       <div className="row">
         <div className="col-lg-3 col-6 mb-4">
-          <div className="card border-left border-primary shadow h-100 py-2">
+          <div className="card  border-left border-primary shadow h-100 py-2">
             <div className="card-body">
               <div className="row no-gutters align-items-center">
                 <div className="col mr-2">
-                  <div className="text-xs font-weight-bold text-dark text-uppercase mb-1">
+                  <div className="text-xs font-weight-bold text-light text-uppercase mb-1">
                     Items
                   </div>
                   <div className="h5 mb-0 font-weight-bold text-gray-800">
@@ -27,11 +27,11 @@ function Home() {
         </div>
 
         <div className="col-lg-3 col-6 mb-4">
-          <div className="card border-left border-success shadow h-100 py-2">
+          <div className="card border-left border-danger shadow h-100 py-2">
             <div className="card-body">
               <div className="row no-gutters align-items-center">
                 <div className="col mr-2">
-                  <div className="text-xs font-weight-bold text-dark text-uppercase mb-1">
+                  <div className="text-xs font-weight-bold text-light text-uppercase mb-1">
                     Products
                   </div>
                   <div className="h5 mb-0 font-weight-bold text-gray-800">
@@ -47,11 +47,11 @@ function Home() {
         </div>
 
         <div className="col-lg-3 col-6 mb-4">
-          <div className="card border-left border-info shadow h-100 py-2">
+          <div className="card border-left border-primary shadow h-100 py-2">
             <div className="card-body">
               <div className="row no-gutters align-items-center">
                 <div className="col mr-2">
-                  <div className="text-xs font-weight-bold text-dark text-uppercase mb-1">
+                  <div className="text-xs font-weight-bold text-light text-uppercase mb-1">
                     Completion
                   </div>
                   <div className="row no-gutters align-items-center">
@@ -63,7 +63,7 @@ function Home() {
                     <div className="col">
                       <div className="progress progress-sm mr-2">
                         <div
-                          className="progress-bar bg-info"
+                          className="progress-bar secondary-color"
                           role="progressbar"
                           style={{ width: "50%" }}
                           aria-valuenow="50"
@@ -83,11 +83,11 @@ function Home() {
         </div>
 
         <div className="col-lg-3 col-6 mb-4">
-          <div className="card border-left border-warning shadow h-100 py-2">
+          <div className="card border-left border-danger shadow h-100 py-2">
             <div className="card-body">
               <div className="row no-gutters align-items-center">
                 <div className="col mr-2">
-                  <div className="text-xs font-weight-bold text-dark text-uppercase mb-1">
+                  <div className="text-xs font-weight-bold text-light text-uppercase mb-1">
                     Pending Orders
                   </div>
                   <div className="h5 mb-0 font-weight-bold text-gray-800">
@@ -107,7 +107,7 @@ function Home() {
           <div className="col-xl-8 col-lg-7">
             <div className="card shadow mb-4">
               <div className="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 className="m-0 font-weight-bold text-dark">
+                <h6 className="m-0 font-weight-bold text-light">
                   Earnings Overview
                 </h6>
                 <div className="dropdown no-arrow">
@@ -139,7 +139,8 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div className="card-body">
+              
+              <div className="card-body top-border">
                 body
               </div>
             </div>
@@ -148,7 +149,7 @@ function Home() {
           <div className="col-xl-4 col-lg-5">
             <div className="card shadow mb-4">
               <div className="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 className="m-0 font-weight-bold text-dark">
+                <h6 className="m-0 font-weight-bold text-light">
                   Revenue Sources
                 </h6>
                 <div className="dropdown no-arrow">
@@ -180,7 +181,7 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div className="card-body">
+              <div className="card-body top-border">
                 body
               </div>
             </div>

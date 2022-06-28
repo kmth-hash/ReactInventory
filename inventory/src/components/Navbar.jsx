@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import { Link } from "react-router-dom";
+import {Search} from 'react-bootstrap-icons';
 
 function Navbar() {
   return (
@@ -80,16 +81,17 @@ function Navbar() {
         <form className="form-inline my-2 my-lg-0">
           <div className="d-flex justify-content-center w-100">
           <input
-            className="form-control my-2 mr-0"
+            className="form-control my-2 mr-0 search-input"
             type="search"
-            placeholder="Search"
+            placeholder="Type here ..."
             aria-label="Search"
           />
           <button
-            className="btn btn-primary my-2 my-0"
+            className="btn primary-color-1 search-btn my-2 my-0"
             type="submit"
           >
-            Search
+            <span><Search className="search-icon"/></span>&nbsp;
+            
           </button>
           </div>
         </form>
