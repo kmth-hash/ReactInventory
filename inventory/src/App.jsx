@@ -5,9 +5,9 @@ import { BrowserRouter, Link, Navigate, Routes, Route } from "react-router-dom";
 import counterReducer from "./reducers/CounterReducer";
 import ItemAdd from "./pages/ItemAdd";
 import Navbar from "./components/Navbar";
-import Counter from "./pages/Counter";
 import PageNotFound from "./pages/PageNotFound";
 import Home from "./pages/Home";
+import Bills from "./pages/Bills";
 
 const appReducers = combineReducers({
   counter: counterReducer,
@@ -19,11 +19,12 @@ function App() {
       <div className="App primary-color-1">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Navigate to={"/home"} />} />
-          <Route path="item-add" element={<ItemAdd />} />
-          <Route path="home" element={<Home />} />
-          <Route path="items" element={<ItemAdd />} />
-          <Route path="products" element={<ItemAdd />} />
+          <Route path="/item-add" element={<ItemAdd />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/items" element={<ItemAdd />} />
+          <Route path="/products" element={<ItemAdd />} />
+          <Route path="/record" element={<Bills />} />
+          <Route exact path="/" element={<Navigate to={"/home"} />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </div>

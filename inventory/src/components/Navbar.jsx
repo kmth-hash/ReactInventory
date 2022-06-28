@@ -6,7 +6,7 @@ import {Search} from 'react-bootstrap-icons';
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a className="navbar-brand" href="#">
+      <a className="navbar-brand" href="/">
         StoreIt
       </a>
       <button
@@ -23,11 +23,11 @@ function Navbar() {
 
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
-          <li className="nav-item active">
+          {/* <li className="nav-item active">
             <a className="nav-link" href="/home">
               Home <span className="sr-only">(current)</span>
             </a>
-          </li>
+          </li> */}
           <li className="nav-item">
             <a className="nav-link" href="/items">
               Items
@@ -39,8 +39,8 @@ function Navbar() {
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
-              Link#
+            <a className="nav-link" href="/record">
+              Bills
             </a>
           </li>
           <li className="nav-item dropdown">
@@ -62,14 +62,14 @@ function Navbar() {
               <a className="dropdown-item" href="/manage-item">
                 Manage Items
               </a>
-              <div className="dropdown-divider"></div>
-              <a className="dropdown-item" href="/prod-add">
+              {/* <div className="dropdown-divider"></div> */}
+              {/* <a className="dropdown-item" href="/prod-add">
                 Add Product 
               </a>
               <a className="dropdown-item" href="/manage-prod">
                 Manage Products
               </a>
-              <div className="dropdown-divider"></div>
+              <div className="dropdown-divider"></div> */}
             </div>
           </li>
           {/* <li className="nav-item">
@@ -88,7 +88,7 @@ function Navbar() {
           />
           <button
             className="btn primary-color-1 search-btn my-2 my-0"
-            type="submit"
+            type="button"
           >
             <span><Search className="search-icon"/></span>&nbsp;
             
