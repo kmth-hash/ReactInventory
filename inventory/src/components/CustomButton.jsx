@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import '../styles/customButton.css';
 
-function CustomButton({name='SUBMIT' , fnCall='' , color="#4caf50"}) {
+function CustomButton({name='SUBMIT' , fnCall='' , color="#ff3d58"}) {
   //   const [fn, setfn] = useState("");
 
   return (
