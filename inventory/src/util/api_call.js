@@ -31,8 +31,25 @@ const testmethod =async()=>{
     console.log(itemRef);
 }
 
+const getAllItems = async()=>{
+    const itemsRef = collection(db,"items");
+    const qsnap = await getDocs(itemsRef).then((qsnap)=>{
+        let res = [];
+
+        qsnap.forEach(doc=>{
+            console.log(doc.data());
+            res.push(doc.data());
+        });
+        return res;
+    });
+    
+    return qsnap;
+    
+}
+
 export {
     addItem , 
     testmethod , 
-    deleteItemByName
+    deleteItemByName,
+    getAllItems 
 }
