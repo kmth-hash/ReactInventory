@@ -1,9 +1,21 @@
 .itemcard-icon:hover{    
-    transform: rotate(270deg);
+    /* transform: rotate(270deg); */
     height: 50%;
     z-index: 1;
-    background: var(--text-color);
 }
 
+.item-add-img{
+    display: flex;
+    justify-content: center;
+    width: 245px !important;
+}
 
+.item-add-img>img{
+    max-width: 100%;
+    height: auto;
+}
 
+.exp-btn{
+    padding: auto 2rem;
+    width: 125px;
+}

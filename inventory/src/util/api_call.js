@@ -1,13 +1,14 @@
 import {addDoc, collection, where,query, getDocs, deleteDoc, doc } from 'firebase/firestore';
 import {db} from '../db/config';
-const addItem =async(itemname , qty='kg' , price=0.0 , count =0)=>{
+const addItem =async(itemname , qty='kg' , price=0.0 , count =0 , status ='')=>{
     const itemRef = collection(db , 'items');
     try{
         const addedItem = await addDoc(itemRef, {
             itemname , 
             qty ,
             count ,
-            price
+            price , 
+            status
         });
         console.log(addedItem.id,'==> Added ');
     }
