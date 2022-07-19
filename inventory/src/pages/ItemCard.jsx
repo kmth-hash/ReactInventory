@@ -1,28 +1,29 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
 import {App , XDiamondFill} from 'react-bootstrap-icons';
 import '../styles/itemcard.css';
 
-function ItemCard({itemData , setcount, count}) {
-  const [enabled, setenabled] = useState(true);
+function ItemCard({itemData , setcount, tick ,count}) {
+  const [enabled, setenabled] = useState(tick);
   
   const updateCount =()=>{    
-    if(!enabled)
-    {
-      setcount(count+1);
+    enabled ? setcount(count-1) : setcount(count+1);
+    setenabled(!enabled);
+  }
+
+  useEffect(() => {
+    console.log(count , enabled);
+  
+    return () => {
       
     }
-    else{
-      setcount(count-1);
-    }
-    setenabled(!enabled);
-    console.log(count , enabled);
-  }
+  }, [enabled])
+  
 
   return (
     <div className='itemcard d-flex flex-row m-0 w-100'>
         <div className='bg-dark text-light d-flex'>
             {
-              enabled 
+              !enabled 
               ? 
               <App className='card-center itemcard-icon' onClick={updateCount} /> 
               : 

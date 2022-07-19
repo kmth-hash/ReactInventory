@@ -1,13 +1,27 @@
-import React , {useEffect , useState } from 'react';
+import React , {useEffect , useState, useRef } from 'react';
 // import CustomButton from '../components/CustomButton';
 import { getAllItems } from '../util/api_call';
-import { Search, ListCheck ,Trash  } from 'react-bootstrap-icons';
+import { Search, ListCheck ,Trash , App , Check } from 'react-bootstrap-icons';
 import '../styles/items.css';
 import ItemCard from './ItemCard';
 
 function Items() {
     const [itemList, setitems] = useState([]);
     const [count , setcount] = useState(0);
+    const allSelected = useRef(false);
+    const selectAllfn = () =>{
+        if(count===itemList.length)
+        {
+            setcount(0);
+            allSelected.current = false;
+        }
+        else
+        {
+            setcount(itemList.length);
+            allSelected.current = true;
+        }
+        // console.log(count);
+    }
 
     useEffect(() => {
         const setData = async()=>{
@@ -20,9 +34,10 @@ function Items() {
     
     }, [])
     useEffect(() => {
-      console.log(itemList);
+    //   console.log(itemList);
+      console.log(count===itemList.length ? true : false);
   
-    }, [itemList])
+    }, [itemList,count])
     
     
   return (
@@ -43,16 +58,26 @@ function Items() {
                     </div>
                     <div className="square">
                         <ListCheck />
-                    </div>
-                    
+                    </div>                    
                 </div>
+            </div>
+            <div className='itemcard d-flex flex-row m-0 col-11'>
+                <div className='bg-dark text-light d-flex'>
+                {
+                    count===itemList.length ? <Trash className='text-center m-auto'/> : <ListCheck className='text-center m-auto'/>
+                }
+                </div>
+                <div className='text-left pl-1 text-capitalize'>Item</div>
+                <div className='text-left pl-1 text-capitalize'>Qty </div>
+                <div>Price </div>
+                <div>Count</div>
             </div>
             <div className="col-11 col-md-11">
                 {
                     itemList.map((val,key)=>{
-                        console.log(val); 
+                        // console.log(val); 
                         return(
-                            <ItemCard key={key} itemData={val} setcount={setcount} count={count} />
+                            <ItemCard key={key} itemData={val} setcount={setcount} count={count} tick={true} />
                         )
                     })
                 }
