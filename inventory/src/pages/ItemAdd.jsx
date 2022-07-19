@@ -10,12 +10,12 @@ function ItemAdd() {
 
 
   return (
-    <div className="container font-weight-bold text-light border p-2 mt-3">
+    <div className="container primary-color-2 font-weight-bold text-light p-2 mt-3">
       <h2 className="header">NEW ITEM</h2>
       
-      <div className="container  row py-3">
-        <div className="col-md-6 bg-dark item-add-img p-2">
-          <img src="logo512.png" alt="missing" />
+      <div className="container d-flex mx-auto row py-3">
+        <div className="col-md-6 bg-dark item-add-img p-2 d-flex justify-content-center ">
+          <img src="logo512.png" alt="missing" className="fluid" />
         </div>
 
         <div className="col-md-6 col-12 d-flex flex-column align-items-start">

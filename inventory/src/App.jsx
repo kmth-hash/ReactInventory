@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import PageNotFound from "./pages/PageNotFound";
 import Home from "./pages/Home";
 import Bills from "./pages/Bills";
+import Items from "./pages/Items";
 
 const appReducers = combineReducers({
   counter: counterReducer,
@@ -21,7 +22,7 @@ function App() {
         <Routes>
           <Route path="/item-add" element={<ItemAdd />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/items" element={<ItemAdd />} />
+          <Route path="/items" element={<Items />} />
           <Route path="/products" element={<ItemAdd />} />
           <Route path="/record" element={<Bills />} />
           <Route exact path="/" element={<Navigate to={"/home"} />} />
